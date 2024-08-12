@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import {Button} from "./components/Button.styled";
+import {Theme} from "./components/styles/Theme.styled";
+import {Card} from "./components/Card";
+import {Typography} from "./components/typography/Typography";
+import {Wrapper} from "./components/Wrapper";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+<Card>
+    <img src="/images/Logo.png" alt=""/>
+    <Wrapper maxWidth={'26rem'}>
+        <Typography as="h1">Headline</Typography>
+        <Typography as="p" color={Theme.colors.typographyLight}>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Typography>
+    </Wrapper>
+    <Wrapper>
+        <Button primary>See more</Button>
+        <Button outlined>Save</Button>
+    </Wrapper>
+</Card>
+        </div>
+    );
 }
 
 export default App;
